@@ -1,0 +1,12 @@
+<ion-list>
+  <ion-item *ngFor="let item of currentItems">
+    <button ion-item (click)="openItem(item)">
+      <ion-avatar item-start>
+        <img [src]="item.image" />
+      </ion-avatar>
+      <h2>{{item[show.title]}}</h2>
+      <p>{{item[show.subtitle]}}</p>
+      <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+    </button>
+  </ion-item>
+</ion-list>

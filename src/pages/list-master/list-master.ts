@@ -1,19 +1,23 @@
-import { Component } from '@angular/core';
-import { IonicPage, ModalController, NavController } from 'ionic-angular';
+import {Component, OnInit} from '@angular/core';
+import { IonicPage, NavController } from 'ionic-angular';
 
 
 import {Building} from "../../models/building";
-import {Buildings} from "../../providers";
+import {BuildingsProvider} from "../../providers";
 
 @IonicPage()
 @Component({
   selector: 'page-list-master',
   templateUrl: 'list-master.html'
 })
-export class ListMasterPage {
+export class ListMasterPage implements OnInit {
   currentItems: Array<Building>;
+  showOnList: {title: 'name', subtitle: 'short_description'};
 
-  constructor(public navCtrl: NavController, public items: Buildings, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public items: BuildingsProvider) {}
+
+
+  ngOnInit() {
     this.currentItems = this.items.query();
   }
 
@@ -24,12 +28,7 @@ export class ListMasterPage {
   }
 
 
-  /**
-   * Navigate to the detail page for this item.
-   */
-  openItem(item: Building) {
-    this.navCtrl.push('ItemDetailPage', {
-      item: item
-    });
+  search() {
+    this.navCtrl.push('SearchPage');
   }
 }

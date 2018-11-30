@@ -1,16 +1,9 @@
-<!--
-  Generated template for the HomePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-
 <ion-content padding>
 
-  <button ion-button outline block large><ion-icon name="paw"></ion-icon> &nbsp;welcome</button>
-  <button ion-button outline block large class="tab">places</button>
-  <button ion-button outline block large class="tab"><ion-icon name="people"></ion-icon> &nbsp;events</button>
-  <button ion-button outline block large class="tab"><ion-icon name="bus"></ion-icon> &nbsp;trolleys</button>
-  <button ion-button outline block large class="tab"><ion-icon name="pin"></ion-icon> &nbsp;map</button>
+  <button ion-button  block large><ion-icon name="paw"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;welcome</button>
+  <button (click)="open('MenuPage')" ion-button outline block large class="tab"><ion-icon name="pin"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;places</button>
+  <button (click)="open('EventListPage')" ion-button outline block large class="tab"><ion-icon name="people"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;events</button>
+  <button ion-button outline block large class="tab"><ion-icon name="bus"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trolleys</button>
+  <button ion-button outline block large class="tab"><ion-icon name="map"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map</button>
 
 </ion-content>

@@ -1,5 +1,5 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ErrorHandler, NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, ErrorHandler, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Camera } from '@ionic-native/camera';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -9,10 +9,12 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
-import { Buildings } from '../providers';
-import { Settings, User, Api } from '../providers';
+import { BuildingsProvider, Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
 import { HomePage } from "../pages/home/home";
+import {ComponentsModule} from "../components/components.module";
+import { EventsProvider } from '../providers/events';
+import {EventListPage} from "../pages/event-list/event-list";
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -38,7 +40,8 @@ export function provideSettings(storage: Storage) {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    // EventListPage
   ],
   imports: [
     BrowserModule,
@@ -50,13 +53,15 @@ export function provideSettings(storage: Storage) {
         deps: [HttpClient]
       }
     }),
+    ComponentsModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    // EventListPage
   ],
   providers: [
     // Api,
@@ -67,7 +72,9 @@ export function provideSettings(storage: Storage) {
     StatusBar,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    BuildingsProvider,
+    EventsProvider
   ]
 })
 export class AppModule { }
