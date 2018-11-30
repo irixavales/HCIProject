@@ -6,12 +6,14 @@ import { Config, Nav, Platform } from 'ionic-angular';
 
 import { Settings } from '../providers';
 import {MainPage} from "../pages";
+// import {HomePage} from "../pages";
+import {HomePage} from "../pages/home/home";
 
 @Component({
   template: `<ion-menu [content]="content">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Edificios</ion-title>
+        <ion-title>Pages</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -22,13 +24,12 @@ import {MainPage} from "../pages";
         </button>
       </ion-list>
     </ion-content>
-
   </ion-menu>
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  // rootPage = FirstRunPage;
-  rootPage = MainPage;
+
+  rootPage = HomePage;
 
   @ViewChild(Nav) nav: Nav;
 
@@ -38,8 +39,6 @@ export class MyApp {
     { title: 'Tabs', component: 'TabsPage' },
     { title: 'Cards', component: 'CardsPage' },
     { title: 'Content', component: 'ContentPage' },
-    { title: 'Login', component: 'LoginPage' },
-    { title: 'Signup', component: 'SignupPage' },
     { title: 'Master Detail', component: 'ListMasterPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },

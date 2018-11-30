@@ -12,6 +12,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { Buildings } from '../providers';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
+import { HomePage } from "../pages/home/home";
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -36,7 +37,8 @@ export function provideSettings(storage: Storage) {
 
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
+    HomePage
   ],
   imports: [
     BrowserModule,
@@ -53,13 +55,14 @@ export function provideSettings(storage: Storage) {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
+    MyApp,
+    HomePage
   ],
   providers: [
-    Api,
-    Buildings,
-    User,
-    Camera,
+    // Api,
+    // Buildings,
+    // User,
+    // Camera,
     SplashScreen,
     StatusBar,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },

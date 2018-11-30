@@ -12,7 +12,7 @@ export class Buildings {
       name: "Edificio Luis Stefani",
       abbreviation: "S",
       category: [Category.Academic, Category.Research],
-      short_description: "",
+      short_description: "Departamento de Ingenieria Electrica y de Computadoras",
       long_description: "",
       coordinates: [0,0],
       image: '../../assets/img/speakers/edificio_stefani.jpg'
@@ -22,7 +22,7 @@ export class Buildings {
       name: "Edificio Luis Monzon",
       abbreviation: "M",
       category: [],
-      short_description: "",
+      short_description: "Departamento de Matematicas",
       long_description: "",
       coordinates: [1,0],
       image: '../../assets/img/speakers/edificio_monzon.jpg'
@@ -57,13 +57,4 @@ export class Buildings {
     });
   }
 
-  // do we really need function to add building ???
-  add(building: Building) {
-    this.buildings.push(building);
-  }
-
-  // do we really need to delete buildings ????
-  delete(building: Building) {
-    this.buildings.splice(this.buildings.indexOf(building), 1);
-  }
 }
