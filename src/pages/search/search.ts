@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import {Building} from "../../models/building";
-import {BuildingsProvider} from "../../providers";
+import {BuildingsProvider, EventsProvider} from "../../providers";
 
 @IonicPage()
 @Component({
@@ -11,9 +11,13 @@ import {BuildingsProvider} from "../../providers";
 })
 export class SearchPage {
 
-  currentItems: any = [];
+  currentItems: Array<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public items: BuildingsProvider) { }
+  default_img_path = '../../assets/img/no_img.png';
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public buildings: BuildingsProvider,
+              public events: EventsProvider) { }
 
   /**
    * Perform a service for the proper items.
@@ -24,15 +28,20 @@ export class SearchPage {
       this.currentItems = [];
       return;
     }
-    this.currentItems = this.items.query({
-      name: val
-    });
+    this.currentItems = [];
+    this.buildings.query({
+      name: val, short_description: val, abbreviation: val, category: val, long_description: val
+    }).map(item => {this.currentItems.push(item)});
+    this.events.query({
+      title: val, date: val, description: val, place: val
+    }).map(item => {this.currentItems.push(item)});
+    console.log(this.currentItems);
   }
 
   /**
    * Navigate to the detail page for this item.
    */
-  openItem(item: Building) {
+  openItem(item: any) {
     this.navCtrl.push('ItemDetailPage', {
       item: item
     });

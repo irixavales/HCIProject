@@ -16,7 +16,7 @@ export class EventsProvider {
       return this.buildings;
     }
 
-    // return only specified parameters
+    // return only elements with specified parameters
     return this.buildings.filter((building) => {
       for (let key in params) {
         let field = building[key];

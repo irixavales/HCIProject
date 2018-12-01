@@ -48,8 +48,7 @@ export class TabsPage implements OnInit {
    * Navigate to search page
    */
   search() {
-    // this.navCtrl.push('SearchPage');
-    this.content = SearchPage;
+    this.navCtrl.push('SearchPage');
   }
 
 }

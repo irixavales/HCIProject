@@ -1,8 +1,10 @@
 <ion-content>
 
   <ion-list>
-    <ion-item *ngFor="let item of currentItems">
-      <button ion-item (click)="openItem(item)">
+    <ion-item-group *ngFor="let m of months">
+      <ion-item-divider color="light">{{m}}</ion-item-divider>
+      <div *ngFor="let item of currentItems">
+      <button *ngIf="item" ion-item (click)="openItem(item)">
         <ion-avatar item-start>
           <img [src]="item.image" />
         </ion-avatar>
@@ -10,7 +12,8 @@
         <p>{{item.date}}</p>
         <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
       </button>
-    </ion-item>
+      </div>
+    </ion-item-group>
   </ion-list>
 
 </ion-content>
