@@ -23,6 +23,6 @@ export const Trolleys: Array<Trolley> = [
         end: '10:00PM'
       },
     ],
-    image: '../../assets/trolley-rutas/Ruta 1.jpg'
+    image: '../../../assets/trolley-rutas/Ruta 1.jpg'
   }
 ];

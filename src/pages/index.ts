@@ -5,7 +5,9 @@ export const HomePage = 'HomePage';
 export const MainPage = 'TabsPage';
 
 // The initial root pages for our tabs (remove if not using tabs)
-export const Tab1Root = 'BuildingListPage';
-export const Tab2Root = 'EventListPage';
-export const Tab3Root = 'TrolleyListPage';
-export const Tab4Root = 'MapPage';
+export const TabsRoot = [
+  {root: 'BuildingListPage', title: 'Places', icon: 'pin'},
+  {root: 'EventListPage', title: 'Events', icon: 'people'},
+  {root: 'TrolleyListPage', title: 'Trolleys', icon: 'bus'},
+  {root: 'MapPage', title: 'Map', icon: 'map'},
+];

@@ -14,4 +14,11 @@ export class ItemDetailPage {
     this.item = navParams.get('item');
   }
 
+  goToMap() {
+    this.navCtrl.push('MapPage', {
+      // map is the 4th tab, which means it has an index 3
+      selected: 3
+    });
+  }
+
 }
