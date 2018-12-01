@@ -1,11 +1,16 @@
 <ion-content padding>
 
-  <button ion-button outline block large><ion-icon name="paw"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;welcome</button>
+  <button class="title" ion-button clear block large disabled><ion-icon name="paw">
+    <div class="text" text-uppercase>welcome</div></ion-icon></button>
 
-  <ion-list>
-    <button *ngFor="let p of pages" ion-button outline block large (click)="open(p)">
-      <ion-icon name="{{p.icon}}">&nbsp;&nbsp;&nbsp;&nbsp;{{p.title}}</ion-icon>
-    </button>
-  </ion-list>
+  <div class="buttons-container">
+    <ion-list>
+      <div *ngFor="let p of pages" padding-bottom="10%">
+        <button class="tab" ion-button block medium (click)="open(p)">
+          <ion-icon name="{{p.icon}}"><div class="text">{{p.title}}</div></ion-icon>
+        </button>
+      </div>
+    </ion-list>
+  </div>
 
 </ion-content>
