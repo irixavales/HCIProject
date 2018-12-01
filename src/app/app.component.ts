@@ -6,26 +6,11 @@ import { Config, Nav, Platform } from 'ionic-angular';
 
 import { Settings } from '../providers';
 import {MainPage} from "../pages";
-// import {HomePage} from "../pages";
 import {HomePage} from "../pages/home/home";
 
-@Component({
-  template: `<ion-menu [content]="content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Pages</ion-title>
-      </ion-toolbar>
-    </ion-header>
 
-    <ion-content>
-      <ion-list>
-        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-          {{p.title}}
-        </button>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
-  <ion-nav #content [root]="rootPage"></ion-nav>`
+@Component({
+  templateUrl: 'app.html'
 })
 export class MyApp {
 
@@ -34,11 +19,11 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Tutorial', component: 'TutorialPage' },
-    { title: 'Welcome', component: 'WelcomePage' },
+    // { title: 'Tutorial', component: 'TutorialPage' },
+    // { title: 'Welcome', component: 'WelcomePage' },
     { title: 'Tabs', component: 'TabsPage' },
-    { title: 'Cards', component: 'CardsPage' },
-    { title: 'Content', component: 'ContentPage' },
+    // { title: 'Cards', component: 'CardsPage' },
+    // { title: 'Content', component: 'ContentPage' },
     { title: 'Master Detail', component: 'ListMasterPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },

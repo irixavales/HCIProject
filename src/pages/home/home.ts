@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {IonicPage, Nav, NavController, NavParams} from 'ionic-angular';
+import {ListMasterPage} from "../list-master/list-master";
+import {EventListPage} from "../event-list/event-list";
+import {TabsPage} from "../tabs/tabs";
 
-/**
- * Generated class for the HomePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+interface PageItem {
+  title: string
+  component: any
+  icon: string
+}
+type PageList = PageItem[]
+
 
 @IonicPage()
 @Component({
@@ -15,7 +19,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HomePage {
 
+  @ViewChild(Nav) nav: Nav;
+
+  pages: PageList;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.pages = [
+      { title: 'Places', component: 'TabsPage', icon: 'pin' },
+      { title: 'Events', component: 'EventListPage', icon: 'people' },
+      { title: 'Trolleys', component: 'ListMasterPage', icon: 'bus' },
+      { title: 'Map', component: 'ListMasterPage', icon: 'map' },
+    ]
   }
 
   ionViewDidLoad() {
