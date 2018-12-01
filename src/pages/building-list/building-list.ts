@@ -7,10 +7,10 @@ import {BuildingsProvider} from "../../providers";
 
 @IonicPage()
 @Component({
-  selector: 'page-list-master',
-  templateUrl: 'list-master.html'
+  selector: 'building-list-master',
+  templateUrl: 'building-list.html'
 })
-export class ListMasterPage {
+export class BuildingListPage {
   currentItems: Array<Building>;
 
   constructor(public navCtrl: NavController, public items: BuildingsProvider, public modalCtrl: ModalController) {

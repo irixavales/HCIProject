@@ -6,8 +6,8 @@ import {Event} from "../../models/event";
 
 @IonicPage()
 @Component({
-  selector: 'page-list-master',
-  templateUrl: 'list-master.html'
+  selector: 'event-list',
+  templateUrl: 'event-list.html'
 })
 export class EventListPage {
   currentItems: Array<Event>;
