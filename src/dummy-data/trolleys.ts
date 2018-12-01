@@ -23,7 +23,7 @@ export const Trolleys: Array<Trolley> = [
         end: '10:00PM'
       },
     ],
-    image: '../../../assets/img/trolley-rutas/Ruta 1.jpg'
+    image: '../../../assets/img/trolley-rutas/Ruta 1 cropped.jpeg'
   },
   {
     name: 'Expreso Zoologico a Fisica',
@@ -45,7 +45,7 @@ export const Trolleys: Array<Trolley> = [
         end: '10:00PM'
       },
     ],
-    image: '../../../assets/img/trolley-rutas/Ruta 2.jpg'
+    image: '../../../assets/img/trolley-rutas/Ruta 2 cropped.jpeg'
   },
   {
     name: 'Interna',
@@ -63,6 +63,29 @@ export const Trolleys: Array<Trolley> = [
         end: '10:00PM'
       }
     ],
-    image: '../../../assets/img/trolley-rutas/Ruta 3.jpg'
+    image: '../../../assets/img/trolley-rutas/Ruta 3 cropped.jpeg'
+  },
+  {
+    name: 'Terrace',
+    stops: ['Parque Terrace', 'Finca Alzamora', 'Cita', 'Edificio A', 'Administracion de Empresas',
+      'Esquina Biblioteca', 'Patio Central', 'Fisica'],
+    schedule: [
+      {
+        num: 1,
+        start: '6:00AM',
+        end: '2:00PM'
+      },
+      {
+        num: 1,
+        start: '10:30AM',
+        end: '6:30PM'
+      },
+      {
+        num: 1,
+        start: '6:30PM',
+        end: '9:30PM'
+      }
+    ],
+    image: '../../../assets/img/trolley-rutas/Ruta 4 cropped.jpeg'
   }
 ];
