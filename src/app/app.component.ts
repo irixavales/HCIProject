@@ -5,8 +5,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Config, Nav, Platform } from 'ionic-angular';
 
 import { Settings } from '../providers';
-import {MainPage} from "../pages";
-import {HomePage} from "../pages/home/home";
+import {HomePage} from "../pages";
 
 
 @Component({
@@ -17,18 +16,6 @@ export class MyApp {
   rootPage = HomePage;
 
   @ViewChild(Nav) nav: Nav;
-
-  // pages: any[] = [
-  //   // { title: 'Tutorial', component: 'TutorialPage' },
-  //   // { title: 'Welcome', component: 'WelcomePage' },
-  //   { title: 'Tabs', component: 'TabsPage' },
-  //   // { title: 'Cards', component: 'CardsPage' },
-  //   // { title: 'Content', component: 'ContentPage' },
-  //   { title: 'Master Detail', component: 'ListMasterPage' },
-  //   { title: 'Menu', component: 'MenuPage' },
-  //   { title: 'Settings', component: 'SettingsPage' },
-  //   { title: 'Search', component: 'SearchPage' }
-  // ];
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -66,9 +53,4 @@ export class MyApp {
     });
   }
 
-  // openPage(page) {
-  //   // Reset the content nav to have just this page
-  //   // we wouldn't want the back button to show in this scenario
-  //   this.nav.setRoot(page.component);
-  // }
 }

@@ -18,6 +18,6 @@ export interface Event {
   description: string,
   date: Date,
   place: string,
-  link: string,
-  image: string
+  link?: string,
+  image?: string
 }

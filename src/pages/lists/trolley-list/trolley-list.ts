@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
-import {EventsProvider} from "../../providers";
-import {Event} from "../../models/event";
+import {TrolleysProvider} from "../../../providers/index";
+import {Trolley} from "../../../models/trolley";
 
 @IonicPage()
 @Component({
-  selector: 'event-list',
-  templateUrl: 'event-list.html'
+  selector: 'trolley-list',
+  templateUrl: 'trolley-list.html'
 })
-export class EventListPage {
-  currentItems: Array<Event>;
+export class TrolleyListPage {
+  currentItems: Array<Trolley>;
 
-  constructor(public navCtrl: NavController, public items: EventsProvider, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public items: TrolleysProvider, public modalCtrl: ModalController) {
     this.currentItems = this.items.query();
   }
 
@@ -27,7 +27,7 @@ export class EventListPage {
    * Navigate to the detail page for this item.
    */
   openItem(item: Event) {
-    this.navCtrl.push('ItemDetailPage', {
+    this.navCtrl.push('TrolleyDetailPage', {
       item: item
     });
   }

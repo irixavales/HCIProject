@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 
-import {Building} from "../../models/building";
-import {BuildingsProvider} from "../../providers";
+import {Building} from "../../../models/building";
+import {BuildingsProvider} from "../../../providers/index";
 
 @IonicPage()
 @Component({
@@ -31,5 +31,28 @@ export class BuildingListPage {
     this.navCtrl.push('ItemDetailPage', {
       item: item
     });
+  }
+
+  /**
+   * Navigate to home page
+   */
+  home() {
+    // this.navCtrl.popTo('MyApp');
+    // this.navCtrl.popAll();
+    // this.navCtrl.setRoot('HomePage');
+    // this.navCtrl.push('HomePage');
+    // this.navCtrl.remove(1);
+    // this.navCtrl.setRoot('HomePage');
+    // this.navCtrl.popToRoot();
+    // this.navCtrl.insert(0, 'HomePage');
+    // this.navCtrl.popToRoot();
+    // this.navCtrl.
+  }
+
+  /**
+   * Navigate to search page
+   */
+  search() {
+    this.navCtrl.push('SearchPage');
   }
 }

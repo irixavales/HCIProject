@@ -1,10 +1,9 @@
 import {Component, ViewChild} from '@angular/core';
 import {IonicPage, Nav, NavController, NavParams} from 'ionic-angular';
-import {TabsPage} from "../tabs/tabs";
+import {MainPage} from "../index";
 
 interface PageItem {
   title: string
-  component: any
   icon: string
 }
 type PageList = PageItem[]
@@ -17,25 +16,25 @@ type PageList = PageItem[]
 })
 export class HomePage {
 
-  @ViewChild(Nav) nav: Nav;
+  // @ViewChild(Nav) nav: Nav;
 
   pages: PageList;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.pages = [
-      { title: 'Places', component: 'TabsPage', icon: 'pin' },
-      { title: 'Events', component: 'TabsPage', icon: 'people' },
-      { title: 'Trolleys', component: 'TabsPage', icon: 'bus' },
-      { title: 'Map', component: 'BuildingListPage', icon: 'map' },
+      { title: 'Places', icon: 'pin' },
+      { title: 'Events', icon: 'people' },
+      { title: 'Trolleys', icon: 'bus' },
+      { title: 'Map', icon: 'map' },
     ]
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+
   }
 
   open(page: PageItem) {
-    this.navCtrl.push(page.component, {
+    this.navCtrl.push(MainPage, {
       selected: this.pages.indexOf(page)
     });
   }

@@ -9,7 +9,7 @@ export const Buildings: Array<Building> = [
       short_description: "Departamento de Ingenieria Electrica y de Computadoras",
       long_description: "",
       coordinates: [0,0],
-      image: '../../assets/img/speakers/edificio_stefani.jpg'
+      image: '../../assets/img/edificios/edificio_stefani.jpg'
     },
     {
       id: 29,
@@ -19,6 +19,6 @@ export const Buildings: Array<Building> = [
       short_description: "Departamento de Matematicas",
       long_description: "",
       coordinates: [1,0],
-      image: '../../assets/img/speakers/edificio_monzon.jpg'
+      image: '../../assets/img/edificios/edificio_monzon.jpg'
     },
 ];

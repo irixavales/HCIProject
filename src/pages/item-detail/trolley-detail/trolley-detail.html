@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Ruta {{ item.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.image + ')'">
+  </div>
+
+  <div class="item-detail" padding>
+    <h2>Ruta {{item.name}}</h2>
+
+    <ion-row>
+      <ion-col>
+        <ion-card class="col-sm-6">
+          <ion-item><h2>Paradas</h2></ion-item>
+          <ion-card-content>
+            <ion-item>
+              <div *ngFor="let s of item.stops">
+                <p>Parada {{item.stops.indexOf(s)+1}}: {{s}}</p>
+              </div>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card>
+          <ion-item><h2>Horarios</h2></ion-item>
+          <ion-card-content>
+            <ion-item>
+              <div *ngFor="let s of item.schedule">
+                <p>{{s.num}} Trolleys:</p>
+                <p>{{s.start}} a {{s.end}}</p>
+                <br>
+              </div>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </div>
+</ion-content>

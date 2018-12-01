@@ -17,11 +17,11 @@ export interface Building {
   id: number, // unique id
   name: string, // full name
   abbreviation: string, // abbreviation
-  category: Category[], // array of categories where building could be classified
+  category?: Category[], // array of categories where building could be classified
   short_description: string, // 2 line description
-  long_description: string, // paragraph description
+  long_description?: string, // paragraph description
   coordinates: [number, number] // coordinates of the location in the map
-  image: string // path of image
+  image?: string // path of image
 }
 
 // Categories into which building may belong. Building may have more than one category.
