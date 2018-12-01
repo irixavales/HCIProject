@@ -3,7 +3,9 @@
   <ion-list>
     <button *ngFor="let item of currentItems" ion-item (click)="openItem(item)">
       <ion-avatar item-start>
-        <img [src]="item.image" />
+        <ng-container *ngIf="item.image; then customImage; else defaultImage"></ng-container>
+        <ng-template #customImage><div><img [src]="item.image" /></div></ng-template>
+        <ng-template #defaultImage><div><img [src]="default_img_path" /></div></ng-template>
       </ion-avatar>
       <h2>{{item.name}}</h2>
       <p>{{item.short_description}}</p>

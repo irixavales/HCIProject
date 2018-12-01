@@ -12,6 +12,8 @@ import {Event} from "../../../models/event";
 export class EventListPage {
   currentItems: Array<Event>;
 
+  default_img_path = '../../../assets/img/no_img.png';
+
   monthStrings = ['January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'];
   currentMonth = new Date().getMonth();

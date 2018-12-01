@@ -6,11 +6,12 @@
       <div *ngFor="let item of currentItems">
       <button *ngIf="item" ion-item (click)="openItem(item)">
         <ion-avatar item-start>
-          <img [src]="item.image" />
+          <ng-container *ngIf="item.image; then customImage; else defaultImage"></ng-container>
+          <ng-template #customImage><div><img [src]="item.image" /></div></ng-template>
+          <ng-template #defaultImage><div><img [src]="default_img_path" /></div></ng-template>
         </ion-avatar>
         <h2>{{item.title}}</h2>
         <p>{{item.date}}</p>
-        <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
       </button>
       </div>
     </ion-item-group>

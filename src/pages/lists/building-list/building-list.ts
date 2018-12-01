@@ -13,6 +13,8 @@ import {BuildingsProvider} from "../../../providers/index";
 export class BuildingListPage {
   currentItems: Array<Building>;
 
+  default_img_path = '../../../assets/img/no_img.png';
+
   constructor(public navCtrl: NavController, public items: BuildingsProvider, public modalCtrl: ModalController) {
     this.currentItems = this.items.query();
   }
