@@ -1,19 +1,18 @@
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
-
-import {Building} from "../../models/building";
-import {BuildingsProvider} from "../../providers";
+import {EventsProvider} from "../../providers";
+import {Event} from "../../models/event";
 
 @IonicPage()
 @Component({
   selector: 'page-list-master',
   templateUrl: 'list-master.html'
 })
-export class ListMasterPage {
-  currentItems: Array<Building>;
+export class EventListPage {
+  currentItems: Array<Event>;
 
-  constructor(public navCtrl: NavController, public items: BuildingsProvider, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public items: EventsProvider, public modalCtrl: ModalController) {
     this.currentItems = this.items.query();
   }
 
@@ -27,7 +26,7 @@ export class ListMasterPage {
   /**
    * Navigate to the detail page for this item.
    */
-  openItem(item: Building) {
+  openItem(item: Event) {
     this.navCtrl.push('ItemDetailPage', {
       item: item
     });

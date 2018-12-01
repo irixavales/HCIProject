@@ -1,7 +1,8 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
+    <!--<ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>-->
+    <ion-title>Events</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -14,8 +15,9 @@
         <ion-avatar item-start>
           <img [src]="item.image" />
         </ion-avatar>
-        <h2>{{item.name}}</h2>
-        <p>{{item.short_description}}</p>
+        <h2>{{item.title}}</h2>
+        <p>{{item.date}}</p>
+        <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
       </button>
     </ion-item>
   </ion-list>
