@@ -9,7 +9,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
-import { Buildings } from '../providers';
+import { BuildingsProvider, EventsProvider } from '../providers';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
 import { HomePage } from "../pages/home/home";
@@ -63,6 +63,8 @@ export function provideSettings(storage: Storage) {
     // Buildings,
     // User,
     // Camera,
+    BuildingsProvider,
+    EventsProvider,
     SplashScreen,
     StatusBar,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },

@@ -1,5 +1,6 @@
 export { Api } from './api/api';
-export {Buildings} from '../dummy-data/buildings';
+export {BuildingsProvider} from './buildings';
+export {EventsProvider} from './events';
 export { Settings } from './settings/settings';
 export { User } from './user/user';
 
