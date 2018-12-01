@@ -8,4 +8,4 @@ export const MainPage = 'TabsPage';
 export const Tab1Root = 'BuildingListPage';
 export const Tab2Root = 'EventListPage';
 export const Tab3Root = 'TrolleyListPage';
-export const Tab4Root = 'CardsPage';
+export const Tab4Root = 'MapPage';
