@@ -1,7 +1,7 @@
 /**
- * A model for buildings
+ * A model for social places
  */
-export class Social Place {
+export class SocialPlace {
 
   constructor(fields: any) {
     // Quick and dirty extend/assign fields to this model
@@ -13,7 +13,7 @@ export class Social Place {
 
 }
 
-export interface Social Place {
+export interface SocialPlace {
   id: number, // unique id
   name: string, // full name
   abbreviation: string, // abbreviation
@@ -21,5 +21,11 @@ export interface Social Place {
   short_description: string, // 2 line description
   long_description?: string, // paragraph description
   coordinates: [number, number] // coordinates of the location in the map
+  link: string,
   image?: string // path of image
+}
+
+export enum Category {
+  Food = 'Food',
+  Coffee = 'Coffee'
 }

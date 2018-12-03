@@ -3,7 +3,8 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 
 import {Building} from "../../../models/building";
-import {BuildingsProvider} from "../../../providers/index";
+import {BuildingsProvider, SocialPlacesProvider} from "../../../providers/index";
+import {SocialPlace} from "../../../models/social-place";
 
 @IonicPage()
 @Component({
@@ -15,16 +16,18 @@ export class BuildingListPage {
   currentBuildings: Array<Building>;
 
   // social places
-  currentSocialPlaces: Array<any>;
+  currentSocialPlaces: Array<SocialPlace>;
 
   // current selected page
+  // set to academic because this is the default tab when page is opened
   selectedPage: string = 'academic';
 
   // path for default image when elements have no images
   default_img_path = '../../../assets/img/no_img.png';
 
-  constructor(public navCtrl: NavController, public buildings: BuildingsProvider, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public buildings: BuildingsProvider, public socialPlaces: SocialPlacesProvider, public modalCtrl: ModalController) {
     this.currentBuildings = this.buildings.query();
+    this.currentSocialPlaces = this.socialPlaces.query();
   }
 
   /**
