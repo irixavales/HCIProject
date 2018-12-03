@@ -8,7 +8,7 @@ export const MainPage = 'TabsPage';
 export const TabsRoot = [
   {root: 'BuildingListPage', title: 'Places', icon: 'pin'},
   {root: 'EventListPage', title: 'Events', icon: 'people'},
-  {root: 'ServicesPage', title: 'Services', icon: 'briefcase'},
+  {root: 'ServicesListPage', title: 'Services', icon: 'briefcase'},
   {root: 'TrolleyListPage', title: 'Trolleys', icon: 'bus'},
   {root: 'MapPage', title: 'Map', icon: 'map'},
 ];

@@ -15,6 +15,7 @@ import { MyApp } from './app.component';
 import {HomePage} from "../pages/home/home";
 import { TrolleysProvider } from '../providers/trolleys';
 import { SocialPlacesProvider } from '../providers/social-places';
+import { ServicesProvider } from '../providers/services';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -73,7 +74,8 @@ export function provideSettings(storage: Storage) {
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     TrolleysProvider,
-    SocialPlacesProvider
+    SocialPlacesProvider,
+    ServicesProvider
   ]
 })
 export class AppModule { }

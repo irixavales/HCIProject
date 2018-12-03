@@ -1,0 +1,17 @@
+<ion-content>
+
+  <ion-list>
+      <div *ngFor="let item of currentItems">
+      <button *ngIf="item" ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <ng-container *ngIf="item.image; then customImage; else defaultImage"></ng-container>
+          <ng-template #customImage><div><img [src]="item.image" /></div></ng-template>
+          <ng-template #defaultImage><div><img [src]="default_img_path" /></div></ng-template>
+        </ion-avatar>
+        <h2>{{item.name}}</h2>
+        <p>{{item.building_location}}</p>
+      </button>
+      </div>
+  </ion-list>
+
+</ion-content>

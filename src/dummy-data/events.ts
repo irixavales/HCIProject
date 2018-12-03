@@ -11,7 +11,7 @@ export const Events: Array<Event> = [
     },
     {
       title: 'Graduacion diciembre',
-      description: 'wooo',
+      description: 'Graduacion',
       date: new Date(2018, 12, 12, 7),
       place: 'Mangual',
       link: null,

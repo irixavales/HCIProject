@@ -13,7 +13,7 @@ import {BuildingsProvider, SocialPlacesProvider} from "../../../providers/index"
   templateUrl: 'building-list.html'
 })
 export class BuildingListPage {
-  // academic buildings
+  // academic services
   currentBuildings: Array<Building>;
 
   // social places
@@ -34,11 +34,10 @@ export class BuildingListPage {
   }
 
   /**
-   * The view loaded, let's query our buildings for the list
+   * The view loaded
    */
   ionViewDidLoad() {
-    console.log(this.currentBuildings);
-    console.log(this.currentSocialPlaces);
+
   }
 
 

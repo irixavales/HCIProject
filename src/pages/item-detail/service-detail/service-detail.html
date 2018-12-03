@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-segment-button></ion-segment-button>
+    <ion-title>{{ item.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.image + ')'">
+  </div>
+
+  <div class="item-detail" padding>
+    <h2>{{item.name}}</h2>
+    <ion-note>OFICINA: {{item.building_location}}</ion-note>
+    <ion-note>TELEFONNO: {{item.telephone}}</ion-note>
+    <p>{{item.long_description}}</p>
+    <link *ngIf="item.link" href="item.link">
+  </div>
+</ion-content>

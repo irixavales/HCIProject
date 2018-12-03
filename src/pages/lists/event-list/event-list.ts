@@ -27,7 +27,7 @@ export class EventListPage {
   }
 
   /**
-   * The view loaded, let's query our buildings for the list
+   * The view loaded, let's query our services for the list
    */
   ionViewDidLoad() {
   }
@@ -37,7 +37,7 @@ export class EventListPage {
    * Navigate to the detail page for this item.
    */
   openItem(item: Event) {
-    this.navCtrl.push('ItemDetailPage', {
+    this.navCtrl.push('EventDetailPage', {
       item: item
     });
   }

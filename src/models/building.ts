@@ -1,5 +1,5 @@
 /**
- * A model for buildings
+ * A model for services
  */
 export class Building {
 
@@ -16,7 +16,7 @@ export class Building {
 export interface Building {
   id: number, // unique id
   name: string, // full name
-  abbreviation: string, // abbreviation
+  abbreviation?: string, // abbreviation
   category?: Category[], // array of categories where building could be classified
   short_description: string, // 2 line description
   long_description?: string, // paragraph description

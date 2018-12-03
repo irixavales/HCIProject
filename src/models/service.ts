@@ -1,5 +1,5 @@
 /**
- * A model for buildings
+ * A model for services
  */
 export class Service {
 
@@ -18,6 +18,6 @@ export interface Service {
   name: string, // full name
   building_location: string, // where the service is provided
   long_description?: string, // paragraph description
-  coordinates: [number, number] // coordinates of the location in the map
+  telephone: string, // phone number to contact this office
   image?: string // path of image
 }
