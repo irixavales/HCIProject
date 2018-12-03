@@ -18,14 +18,16 @@ export class EventListPage {
     'July', 'August', 'September', 'October', 'November', 'December'];
   currentMonth = new Date().getMonth();
   // this will take the next three months
-  months = [this.monthStrings[this.currentMonth], this.monthStrings[(this.currentMonth+1)%12], this.monthStrings[(this.currentMonth+2)%12]];
+  months = [this.monthStrings[this.currentMonth]
+    // , this.monthStrings[(this.currentMonth+1)%12], this.monthStrings[(this.currentMonth+2)%12]
+  ];
 
   constructor(public navCtrl: NavController, public items: EventsProvider, public modalCtrl: ModalController) {
     this.currentItems = this.items.query();
   }
 
   /**
-   * The view loaded, let's query our items for the list
+   * The view loaded, let's query our buildings for the list
    */
   ionViewDidLoad() {
   }

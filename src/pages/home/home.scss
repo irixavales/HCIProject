@@ -1,10 +1,16 @@
 page-home {
 
+  .title {
+    height: 30px;
+    padding-top: 40px;
+  }
+
   .tab {
-    width: 75%;
-    height: 75px;
+    width: 70%;
+    height: 50px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 3%;
   }
 
   .text {
@@ -13,11 +19,11 @@ page-home {
     font-family: "Courier New", SansSerif, monospace;
   }
 
-  .buttons-container {
-    //padding-top: 40%;
+  .buttons {
+    padding-top: 40%;
   }
 
-  .title {
-    height: 30%;
+  #ion-header {
+    //height: 30%;
   }
 }

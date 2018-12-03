@@ -8,8 +8,9 @@
 
 
 <ion-content>
-  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.image + ')'">
-  </div>
+  <!--<div class="item-profile" text-center [style.background-image]="'url(../../../assets/img/trolley-rutas/Ruta 1 cropped.jpeg)'">-->
+  <!--</div>-->
+  <img src="{{item.image}}" />
 
   <div class="item-detail" padding>
     <h2>Ruta {{item.name}}</h2>

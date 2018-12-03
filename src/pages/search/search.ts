@@ -20,7 +20,7 @@ export class SearchPage {
               public events: EventsProvider) { }
 
   /**
-   * Perform a service for the proper items.
+   * Perform a service for the proper buildings.
    */
   getItems(ev) {
     let val = ev.target.value;

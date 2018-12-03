@@ -14,10 +14,13 @@ export class TabsPage implements OnInit {
 
   @ViewChild('myTabs') tabRef: Tabs;
 
+  // selected tab to be displayed when this page gets called
   selectedTab: number;
 
+  // tabs to appear on page
   tabsRoot: any = TabsRoot;
 
+  // no se
   content: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public translateService: TranslateService) {

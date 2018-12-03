@@ -11,16 +11,24 @@ import {BuildingsProvider} from "../../../providers/index";
   templateUrl: 'building-list.html'
 })
 export class BuildingListPage {
-  currentItems: Array<Building>;
+  // academic buildings
+  currentBuildings: Array<Building>;
 
+  // social places
+  currentSocialPlaces: Array<any>;
+
+  // current selected page
+  selectedPage: string = 'academic';
+
+  // path for default image when elements have no images
   default_img_path = '../../../assets/img/no_img.png';
 
-  constructor(public navCtrl: NavController, public items: BuildingsProvider, public modalCtrl: ModalController) {
-    this.currentItems = this.items.query();
+  constructor(public navCtrl: NavController, public buildings: BuildingsProvider, public modalCtrl: ModalController) {
+    this.currentBuildings = this.buildings.query();
   }
 
   /**
-   * The view loaded, let's query our items for the list
+   * The view loaded, let's query our buildings for the list
    */
   ionViewDidLoad() {
   }
@@ -33,22 +41,6 @@ export class BuildingListPage {
     this.navCtrl.push('ItemDetailPage', {
       item: item
     });
-  }
-
-  /**
-   * Navigate to home page
-   */
-  home() {
-    // this.navCtrl.popTo('MyApp');
-    // this.navCtrl.popAll();
-    // this.navCtrl.setRoot('HomePage');
-    // this.navCtrl.push('HomePage');
-    // this.navCtrl.remove(1);
-    // this.navCtrl.setRoot('HomePage');
-    // this.navCtrl.popToRoot();
-    // this.navCtrl.insert(0, 'HomePage');
-    // this.navCtrl.popToRoot();
-    // this.navCtrl.
   }
 
   /**

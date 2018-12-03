@@ -17,7 +17,7 @@ export class TrolleyListPage {
   }
 
   /**
-   * The view loaded, let's query our items for the list
+   * The view loaded, let's query our buildings for the list
    */
   ionViewDidLoad() {
   }
