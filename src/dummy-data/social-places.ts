@@ -1,5 +1,6 @@
 import {Category, SocialPlace} from "../models/social-place";
 
+
 export const SocialPlaces: Array<SocialPlace> = [
   {
     id: 1,

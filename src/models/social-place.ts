@@ -20,7 +20,7 @@ export interface SocialPlace {
   category?: Category[], // array of categories where building could be classified
   short_description: string, // 2 line description
   long_description?: string, // paragraph description
-  coordinates: [number, number] // coordinates of the location in the map
+  coordinates: [number, number], // coordinates of the location in the map
   link: string,
   image?: string // path of image
 }

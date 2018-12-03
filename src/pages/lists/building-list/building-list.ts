@@ -3,8 +3,9 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 
 import {Building} from "../../../models/building";
-import {BuildingsProvider, SocialPlacesProvider} from "../../../providers/index";
 import {SocialPlace} from "../../../models/social-place";
+import {BuildingsProvider, SocialPlacesProvider} from "../../../providers/index";
+
 
 @IonicPage()
 @Component({
@@ -25,7 +26,9 @@ export class BuildingListPage {
   // path for default image when elements have no images
   default_img_path = '../../../assets/img/no_img.png';
 
-  constructor(public navCtrl: NavController, public buildings: BuildingsProvider, public socialPlaces: SocialPlacesProvider, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController,
+              public buildings: BuildingsProvider,
+              public socialPlaces: SocialPlacesProvider) {
     this.currentBuildings = this.buildings.query();
     this.currentSocialPlaces = this.socialPlaces.query();
   }
@@ -34,6 +37,8 @@ export class BuildingListPage {
    * The view loaded, let's query our buildings for the list
    */
   ionViewDidLoad() {
+    console.log(this.currentBuildings);
+    console.log(this.currentSocialPlaces);
   }
 
 

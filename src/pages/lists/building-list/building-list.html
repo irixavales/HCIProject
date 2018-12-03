@@ -10,6 +10,7 @@
   </ion-segment>
 
   <div [ngSwitch]="selectedPage">
+
     <!-- Academic Buildings -->
     <ion-list *ngSwitchCase="'academic'">
       <button *ngFor="let item of currentBuildings" ion-item (click)="openItem(item)">
