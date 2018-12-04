@@ -11,7 +11,7 @@
           <ng-template #defaultImage><div><img [src]="default_img_path" /></div></ng-template>
         </ion-avatar>
         <h2>{{item.title}}</h2>
-        <p>{{item.date}}</p>
+        <p>{{item.date | date:'MMMM d, y  h:mm a'}}</p>
       </button>
       </div>
     </ion-item-group>

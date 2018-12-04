@@ -2,7 +2,7 @@
 
   <ion-navbar>
     <ion-segment-button></ion-segment-button>
-    <ion-title>{{ item.name }}</ion-title>
+    <ion-title>{{item.name | titlecase}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -13,10 +13,10 @@
   </div>
 
   <div class="item-detail" padding>
-    <h2>{{item.name}}</h2>
-    <ion-note>OFICINA: {{item.building_location}}</ion-note>
-    <ion-note>TELEFONNO: {{item.telephone}}</ion-note>
-    <p>{{item.long_description}}</p>
-    <link *ngIf="item.link" href="item.link">
+    <h2>{{item.name | titlecase}}</h2><br>
+    <ion-note>OFICINA: {{item.building_location}}</ion-note><br><br>
+    <ion-note>TELEFONO: <span class="link">{{item.telephone}}</span></ion-note>
+    <p class="paragraph">{{item.long_description}}</p>
+    <div *ngIf="item.link"><span class="link"></span></div>
   </div>
 </ion-content>

@@ -16,7 +16,8 @@ export class ServicesProvider {
       return this.services;
     }
 
-    // return only specified parameters
+    // return only elements with specified parameters
+    // params is a dictionary - key: attribute of obj to take into consideration, value: value to compare and filter
     return this.services.filter((building) => {
       for (let key in params) {
         let field = building[key];

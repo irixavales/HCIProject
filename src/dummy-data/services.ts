@@ -3,13 +3,14 @@ import {Service} from "../models/service";
 export const Services: Array<Service> = [
   {
     id: 1,
-    name: 'ACTIVIDADES ATLÉTICAS',
+    name: 'ACTIVIDADES ATLETICAS',
     building_location: 'Coliseo Rafael A. Mangual',
     long_description: 'El Departamento de Actividades Atléticas ofrece al estudiantado todas las actividades atléticas y recreativas que se producen en el Recinto. Nuestro objetivo es fomentar la participación en actividades deportivas, estimular e inculcar el sentido de pertenencia hacia el Alma Mater y promover del desarrollo integral del individuo. Contamos con 2 programas principales. Deportes de Intramuros con 20 deportes masculinos y 16 femeninos incluyendo voleibol, softbol, baloncesto, natación, lucha olímpica, levantamiento de pesas, campo traviesa, entre otros; y Deportes Interuniversitarios con 16 deportes masculinos y 12 femeninos que incluyen voleibol, aeróbicos, tenis, levantamiento de pesas, lucha olímpica, campo traviesa, polo acuático, baloncesto, béisbol, softbol femenino y masculino, judo, natación, pista y campo, balompié y tenis de mesa. Los estudiantes atletas tienen ciertas ayudas que se les ofrece por su representación de la Institución en competencias de la LAI y de la NCAA. \n' +
-    '\n' +
+    '\n\n' +
     'Las ayudas están condicionadas a la recomendación de su entrenador y su cumplimiento con las normas académicas y deportivas del RUM. Algunas de las ayudas son: hospedaje, comidas, préstamo de libros, vestimenta y equipo deportivo, tutorías, terapia deportiva, asistencia médica, orientación académica y deportiva.',
     telephone: ' (787) 832-4040 ext. 3866',
-    image: ''
+    image: '',
+    link: ''
   },
   {
     id: 2,
@@ -21,7 +22,7 @@ export const Services: Array<Service> = [
   },
   {
     id: 3,
-    name: 'ASISTENCIA ECONÓMICA',
+    name: 'ASISTENCIA ECONOMICA',
     building_location: 'Decanato de Estudiantes',
     long_description: 'El Departamento de Asistencia Económica provee ayudas económicas dentro de los recursos disponibles a los estudiantes que la solicitan y resulten elegibles. Los fondos provienen de fuentes federales, estatales, institucionales y privadas. La ayuda se ofrece mediante becas, las cuales constituyen dinero gratuito que el estudiante no tiene que reembolsar, trabajo donde el estudiante desempeña labor y recibe remuneración de acuerdo a las horas asignadas y trabajadas, préstamos federales los cuales constituyen responsabilidad para el estudiante, ya que tiene que pagarlos luego de que se gradúe o deje de estudiar. Algunas de las ayudas disponibles son:\n' +
       '\n' +
@@ -76,7 +77,7 @@ export const Services: Array<Service> = [
   },
   {
     id: 8,
-    name: 'DEPARTAMENTO DE CONSEJERÍA Y SERVICIOS PSICOLÓGICOS',
+    name: 'DEPARTAMENTO DE CONSEJERIA Y SERVICIOS PSICOLOGICOS',
     building_location: 'Decanato de Estudiantes',
     long_description: 'Los servicios del Departamento de Consejería y Servicios Psicológicos están dirigidos a promover a tu desarrollo integral como estudiantes, contribuyendo al logro de tus objetivos personales y profesionales a través de una serie de intervenciones directas en las áreas educativo-académica, personal-emocional y vocacional-ocupacional. Ofrecemos orientación y consejería individual o grupal, administración e interpretación de pruebas e inventarios, servicios sicológicos, información sobre traslados y transferencias, actividad de programa de bienvenida a los estudiantes de nuevo ingreso, orientación sobre estudios graduados y profesionales en PR y el exterior, programa de estudiantes colaboradores, entre otros. La información discutida es confidencial. Se atienden estudiantes por citas, excepto emergencias en las que se requiere ayuda inmediata.',
     telephone: '787-832-4040 ext. 2040, 3372',
@@ -92,7 +93,7 @@ export const Services: Array<Service> = [
   },
   {
     id: 10,
-    name: 'SERVICIOS MÉDICOS',
+    name: 'SERVICIOS MEDICOS',
     building_location: 'Servicios Médicos',
     long_description: 'Ofrece y administra los servicios de salud a los estudiantes. Ofrece servicios: de: consultas médicas a estudiantes y empleados, enfermería, sala de urgencias y ambulancias, laboratorio clínico, asistencia dental, programa para la promoción de la salud, Proyecto FIESTA Colegial, programa de Planificación Familiar. Además administra el Café Colegial La Cueva de Tarzán, un cibercafé en el que los estudiantes pueden compartir, estudiar y pasarla bien dentro del campus en un ambiente sano, sin la presencia de sustancias controladas y bebidas alcohólicas. ',
     telephone: ' 787-832-4040 ext. 3408, 3416',

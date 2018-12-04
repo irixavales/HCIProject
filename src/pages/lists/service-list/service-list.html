@@ -8,7 +8,7 @@
           <ng-template #customImage><div><img [src]="item.image" /></div></ng-template>
           <ng-template #defaultImage><div><img [src]="default_img_path" /></div></ng-template>
         </ion-avatar>
-        <h2>{{item.name}}</h2>
+        <h2>{{item.name | titlecase}}</h2>
         <p>{{item.building_location}}</p>
       </button>
       </div>

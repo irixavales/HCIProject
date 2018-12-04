@@ -7,18 +7,20 @@ import {ServicesProvider} from "../../../providers/index";
 
 @IonicPage()
 @Component({
-  selector: 'trolley-list',
-  templateUrl: 'trolley-list.html'
+  selector: 'service-list',
+  templateUrl: 'service-list.html'
 })
 export class ServiceListPage {
   currentItems: Array<Service>;
+
+  default_img_path = '../../assets/img/no_img.png';
 
   constructor(public navCtrl: NavController, public items: ServicesProvider, public modalCtrl: ModalController) {
     this.currentItems = this.items.query();
   }
 
   /**
-   * The view loaded, let's query our services for the list
+   * The view loaded
    */
   ionViewDidLoad() {
   }

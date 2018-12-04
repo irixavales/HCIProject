@@ -14,7 +14,7 @@
 
 <ion-content>
 
-  <ion-tabs #myTabs>
+  <ion-tabs #myTabs (ionChange)="change($event.index)">
     <ion-tab *ngFor="let tab of tabsRoot" [root]="tab.root" [tabTitle]="tab.title" [tabIcon]="tab.icon"></ion-tab>
   </ion-tabs>
 

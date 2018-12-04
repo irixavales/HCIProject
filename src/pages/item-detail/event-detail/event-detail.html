@@ -14,8 +14,9 @@
 
   <div class="item-detail" padding>
     <h2>{{item.name}}</h2>
-    <p>Date: {{item.date | date}}</p>
+    <p>Date: {{item.date | date:'longDate'}}</p>
+    <p>Time: {{item.date | date:'shortTime'}}</p>
     <p>Place: {{item.place}}</p>
-    <p>{{item.description}}</p>
+    <p class="paragraph">{{item.description}}</p>
   </div>
 </ion-content>

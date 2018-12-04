@@ -20,4 +20,5 @@ export interface Service {
   long_description?: string, // paragraph description
   telephone: string, // phone number to contact this office
   image?: string // path of image
+  link?: string
 }

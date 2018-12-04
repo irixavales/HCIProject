@@ -1,5 +1,4 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import {IonicPage, NavController, NavParams, Tabs} from 'ionic-angular';
 
 import { TabsRoot } from '../';
@@ -23,7 +22,7 @@ export class TabsPage implements OnInit {
   // no se
   content: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public translateService: TranslateService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
     // que carajo es esto
     // translateService.get(['TAB1_TITLE', 'TAB2_TITLE', 'TAB3_TITLE', 'TAB4_TITLE']).subscribe(values => {
     //   this.tab1Title = values['TAB1_TITLE'];
@@ -36,15 +35,19 @@ export class TabsPage implements OnInit {
 
   ngOnInit() {
     this.selectedTab = this.navParams.get('selected');
+    this.tabRef.select(this.selectedTab);
   }
 
   ionViewDidEnter() {
-    this.tabRef.select(this.selectedTab);
+    console.log(document.getElementById('myTabs'));
   }
 
+  /**
+   * Change the current tab
+   * @param {number} index
+   */
   change(index: number) {
     this.selectedTab = index;
-    this.tabRef.select(this.selectedTab);
   }
 
   /**

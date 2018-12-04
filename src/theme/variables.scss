@@ -79,3 +79,17 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+p.paragraph {
+  text-align: justify;
+  white-space: normal;
+  padding: 10px;
+  font-family: Sans;
+  line-height: 20px;
+}
+
+span.link {
+  color: color($colors, secondary);
+  cursor: pointer;
+  text-decoration: underline;
+}
