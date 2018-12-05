@@ -4,7 +4,7 @@ FROM node:8.12.0
 COPY . /www/app
 
 # Install packages
-RUN npm install -g ionic
+RUN npm install -g cordova ionic
 
 # Set working directory
 WORKDIR /www/app
