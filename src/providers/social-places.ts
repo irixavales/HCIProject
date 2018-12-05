@@ -13,7 +13,7 @@ export class SocialPlacesProvider {
   query(params?: any) {
     // if no parameters are specified, return all
     if (!params) {
-      return this.socialPlaces;
+      return this.sorted();
     }
 
     // return only specified parameters
@@ -30,4 +30,13 @@ export class SocialPlacesProvider {
     });
   }
 
+  sorted() {
+    return this.socialPlaces = this.socialPlaces.sort((a, b) => {
+      return compare(a.name, b.name);
+    });
+  }
+}
+
+function compare(a: string, b: string) {
+  return (a < b ? -1 : 1);
 }

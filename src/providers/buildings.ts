@@ -13,7 +13,7 @@ export class BuildingsProvider {
   query(params?: any) {
     // if no parameters are specified, return all
     if (!params) {
-      return this.buildings;
+      return this.sorted();
     }
 
     // return only specified parameters
@@ -30,4 +30,13 @@ export class BuildingsProvider {
     });
   }
 
+  sorted() {
+    return this.buildings = this.buildings.sort((a, b) => {
+      return compare(a.name, b.name);
+    });
+  }
+}
+
+function compare(a: string, b: string) {
+  return (a < b ? -1 : 1);
 }

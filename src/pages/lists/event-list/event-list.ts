@@ -19,7 +19,8 @@ export class EventListPage {
   currentMonth = new Date().getMonth();
   // this will take the next three months
   months = [this.monthStrings[this.currentMonth]
-    // , this.monthStrings[(this.currentMonth+1)%12], this.monthStrings[(this.currentMonth+2)%12]
+    , this.monthStrings[(this.currentMonth+1)%12],
+    // this.monthStrings[(this.currentMonth+2)%12]
   ];
 
   constructor(public navCtrl: NavController, public items: EventsProvider, public modalCtrl: ModalController) {
@@ -40,5 +41,14 @@ export class EventListPage {
     this.navCtrl.push('EventDetailPage', {
       item: item
     });
+  }
+
+  filterByMonth(month: string) {
+    return this.currentItems.filter((event) => {
+      let event_month = event.date.getMonth();
+      if (this.months[(event_month+1)%12] == month) {
+        return event;
+      }
+    })
   }
 }

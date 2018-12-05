@@ -13,7 +13,7 @@ export class ServicesProvider {
   query(params?: any) {
     // if no parameters are specified, return all
     if (!params) {
-      return this.services;
+      return this.sorted();
     }
 
     // return only elements with specified parameters
@@ -31,4 +31,13 @@ export class ServicesProvider {
     });
   }
 
+  sorted() {
+    return this.services = this.services.sort((a, b) => {
+      return compare(a.name, b.name);
+    });
+  }
+}
+
+function compare(a: string, b: string) {
+  return (a < b ? -1 : 1);
 }

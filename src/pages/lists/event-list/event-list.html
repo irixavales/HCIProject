@@ -3,7 +3,7 @@
   <ion-list>
     <ion-item-group *ngFor="let m of months">
       <ion-item-divider color="light">{{m}}</ion-item-divider>
-      <div *ngFor="let item of currentItems">
+      <div *ngFor="let item of filterByMonth(m)">
       <button *ngIf="item" ion-item (click)="openItem(item)">
         <ion-avatar item-start>
           <ng-container *ngIf="item.image; then customImage; else defaultImage"></ng-container>
