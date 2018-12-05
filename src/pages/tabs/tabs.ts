@@ -31,6 +31,8 @@ export class TabsPage implements OnInit {
     //   this.tab4Title = values['TAB4_TITLE'];
     // });
 
+
+
   }
 
   ngOnInit() {
@@ -39,6 +41,8 @@ export class TabsPage implements OnInit {
   }
 
   ionViewDidEnter() {
+        this.selectedTab = this.navParams.get('selected');
+    this.tabRef.select(this.selectedTab);
     console.log(document.getElementById('myTabs'));
   }
 
