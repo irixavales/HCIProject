@@ -12,6 +12,8 @@ import {SearchPage} from "../search/search";
 export class TabsPage implements OnInit {
 
   @ViewChild('myTabs') tabRef: Tabs;
+  @ViewChild('home_page') home: boolean;
+  // @ViewChild('navCtrl') navChild: NavController;
 
   // selected tab to be displayed when this page gets called
   selectedTab: number;
@@ -19,31 +21,18 @@ export class TabsPage implements OnInit {
   // tabs to appear on page
   tabsRoot: any = TabsRoot;
 
-  // no se
-  content: any;
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    // que carajo es esto
-    // translateService.get(['TAB1_TITLE', 'TAB2_TITLE', 'TAB3_TITLE', 'TAB4_TITLE']).subscribe(values => {
-    //   this.tab1Title = values['TAB1_TITLE'];
-    //   this.tab2Title = values['TAB2_TITLE'];
-    //   this.tab3Title = values['TAB3_TITLE'];
-    //   this.tab4Title = values['TAB4_TITLE'];
-    // });
-
-
-
   }
 
   ngOnInit() {
     this.selectedTab = this.navParams.get('selected');
-    this.tabRef.select(this.selectedTab);
   }
 
   ionViewDidEnter() {
-        this.selectedTab = this.navParams.get('selected');
-    this.tabRef.select(this.selectedTab);
-    console.log(document.getElementById('myTabs'));
+  }
+
+  ngAfterViewInit() {
+    // console.log(this.navChild.first());
   }
 
   /**

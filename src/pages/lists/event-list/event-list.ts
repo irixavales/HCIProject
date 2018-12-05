@@ -10,6 +10,10 @@ import {Event} from "../../../models/event";
   templateUrl: 'event-list.html'
 })
 export class EventListPage {
+
+  // boolean to determine if currently on home page, i.e. the detail page has not been opened
+  home_page: boolean = true;
+
   currentItems: Array<Event>;
 
   default_img_path = '../../../assets/img/no_img.png';
@@ -38,6 +42,7 @@ export class EventListPage {
    * Navigate to the detail page for this item.
    */
   openItem(item: Event) {
+    this.home_page = false;
     this.navCtrl.push('EventDetailPage', {
       item: item
     });
