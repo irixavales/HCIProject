@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
 import { IonicPageModule } from 'ionic-angular';
 
 import { ItemDetailPage } from './item-detail';
+import {IonicImageViewerModule} from "ionic-img-viewer";
 
 @NgModule({
   declarations: [
     ItemDetailPage,
   ],
   imports: [
+    IonicImageViewerModule,
     IonicPageModule.forChild(ItemDetailPage),
-    TranslateModule.forChild()
   ],
   exports: [
     ItemDetailPage

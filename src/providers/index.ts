@@ -1,3 +1,4 @@
+export {ObjectsProvider} from './objects';
 export {BuildingsProvider} from './buildings';
 export {EventsProvider} from './events';
 export {TrolleysProvider} from './trolleys';

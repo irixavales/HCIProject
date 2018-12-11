@@ -1,1 +1,10 @@
-<img [src]="map_path" />
+<style>
+/*.positioner {*/
+  /*top: @pin_x;*/
+  /*left: {{coordinates[1]}};*/
+/*}*/
+</style>
+
+<div class="fullscreen-img">
+  <img #map class="fullscreen-map" src="{{map_path}}" imageViewer />
+</div>

@@ -1,5 +1,5 @@
 /**
- * A model for services
+ * A model for buildings
  */
 export class Building {
 
@@ -26,11 +26,24 @@ export interface Building {
 
 // Categories into which building may belong. Building may have more than one category.
 export enum Category {
-  Academic = "Academic",
-  Sports = "Sports",
-  Administrative = "Administrative",
-  Art = "Art",
-  Research = "Research",
-  // no se que mas hace falta... hacer brainstorming despues
-  // categorias pueden ser muchas (incluyendo facultades, concentraciones, etc). esto puede servir para el search
+  // facultades
+  ArtesYCiencias = "Artes y Ciencias",
+  AdministracionDeEmpresas = "Administracion de Empresas",
+  CienciasAgricolas = "Ciencias Agricolas",
+  Ingenieria = "Ingenieria",
+  // decanatos
+  DecanatoDeAdministracion = "Decanato de Administracion",
+  DecanatoDeAsuntosAcademicos = "Decanato de Asuntos Academicos",
+  DecanatoDeEstudiantes = "Decanato de Estudiantes",
+
+  CentroDeInvestigacionYDesarrollo = "Centro de Investigacion y Desarrollo",
+  Rectoria = "Rectoria",
+  //
+  // Academic = "Academic",
+  // Sports = "Sports",
+  // Administrative = "Administrative",
+  // Art = "Art",
+  // Research = "Research",
+  // // no se que mas hace falta... hacer brainstorming despues
+  // // categorias pueden ser muchas (incluyendo facultades, concentraciones, etc). esto puede servir para el search
 }

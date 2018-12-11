@@ -15,7 +15,7 @@
     <h2>{{item.name}}</h2>
     <ion-note item-end *ngIf="item.category">{{item.category}}</ion-note>
     <link *ngIf="item.link" href="item.link">
-    <ion-buttons end><button ion-button clear (click)="goToMap()">See on map</button></ion-buttons>
+    <ion-buttons end><button ion-button clear (click)="showMap()">See on map</button></ion-buttons>
     <p class="paragraph">{{item.long_description}}</p>
   </div>
 </ion-content>
